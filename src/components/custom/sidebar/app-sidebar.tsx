@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 import {
   AudioWaveform,
   BookOpen,
@@ -10,25 +10,28 @@ import {
   PieChart,
   Settings2,
   SquareTerminal,
-} from "lucide-react"
-import { NavMain } from "@/components/custom/nav-main"
-import { NavProjects } from "@/components/custom/nav-projects"
-import { NavUser } from "@/components/custom/nav-user"
-import { TeamSwitcher } from "@/components/custom/team-switcher"
+} from "lucide-react";
+import { NavMain } from "@/components/custom/sidebar/nav-main";
+import { NavProjects } from "@/components/custom/sidebar/nav-projects";
+import { NavUser } from "@/components/custom/sidebar/nav-user";
+import { TeamSwitcher } from "@/components/custom/sidebar/team-switcher";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar"
-// This is sample data.
+} from "@/components/ui/sidebar";
+
 const data = {
+  // Logged in user profile data
   user: {
     name: "shadcn",
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
+
+  // Available teams to jump upon
   teams: [
     {
       name: "Acme Inc",
@@ -46,6 +49,8 @@ const data = {
       plan: "Free",
     },
   ],
+
+  // Main sidebar navigation elements
   navMain: [
     {
       title: "Playground",
@@ -150,7 +155,7 @@ const data = {
       icon: Map,
     },
   ],
-}
+};
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
@@ -166,5 +171,5 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
-  )
+  );
 }
