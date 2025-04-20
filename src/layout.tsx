@@ -38,7 +38,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Breadcrumb>
           </div>
         </header>
-        <div className="p-4">{children}</div>
+        <div className="p-4 h-full w-full overflow-auto max-h-screen-minus-16">{children}</div>
       </SidebarInset>
     </SidebarProvider>
   );

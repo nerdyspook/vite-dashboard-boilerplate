@@ -118,3 +118,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .max-h-screen-minus-16 {
+    /* main area without header */
+    max-height: calc(100dvh - 64px);
+  }
+}
