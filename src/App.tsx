@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Layout from "@/layout";
+import Layout from "@/components/custom/layout/layout";
 
 function App() {
   const [count, setCount] = useState(0);
